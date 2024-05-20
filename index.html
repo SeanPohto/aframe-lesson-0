@@ -9,18 +9,26 @@
 
 <body>
   <a-scene>
+    <a-assets>
+      <img id="box" src="https://images.pexels.com/photos/172276/pexels-photo-172276.jpeg?cs=srgb&dl=pexels-fwstudio-33348-172276.jpg&fm=jpg">
+    </a-assets>
     <a-entity>
       <a-box position="-1 2 -3" rotation="0 90 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -8" radius="1.25" color="#EF2D5E">
+      <a-sphere position="0 1.25 -8" radius="1.25" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVYgDneTUwcLS25j2g9Zbvh7ISLT0YqGaGpY8edOrylA&s">
         <a-ring position="3 2 -4"></a-ring>
       </a-sphere>
       <a-cylinder position="-1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
     </a-entity>
     <a-torus-knot postion="0 0 -1"> </a-torus-knot>
-    <a-dodecahedron position="2 2 -1" color="0000FF"> </a-dodecahedron>
+    <a-entity animation="atribute: position; to: 0 0 1; direction: alternate; dur: 2000">
+    <a-dodecahedron position="2 2 -1" src="#box"></a-dodecahedron>
+  </a-entity>
+    <a-camera>
+      <a-cursor></a-cursor>
+    </a-camera>
 
-    <a-sky color="#0000FF"></a-sky>
+    <a-sky src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKJHIg7S3xGk4khj8QBO6oBkso_7_Put1Kbw&s"></a-sky>
   </a-scene>
 </body>
 
